@@ -1,0 +1,241 @@
+body {
+  background: #F8F4EC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: backgroundAnimation 20s linear infinite alternate;
+  /* overflow:hidden; */
+  text-decoration: none;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  padding: 10px;
+  /* border: solid black 2px; */
+  background-color: rgba(255, 155, 210,0.5);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.form .form-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.form .signup {
+  height: 25%;
+  width: 25%;
+  border: solid black 2px;
+}
+
+.form .form-header>div {
+  color: #F3EDC8;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.form.signup .form-header div.show-signup {
+  color: #402B3A;
+}
+
+.form .form-elements {
+  margin-top: 15px;
+}
+
+.form .form-elements .form-element {
+  height: 50px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.form .form-elements input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #222;
+  background: #f5f5f5;
+}
+
+.form .form-elements button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(214, 52, 132, 0.2);
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.form .form-elements button:hover {
+  background-color: rgba(214, 52, 132, 1);
+}
+
+
+
+
+
+
+#right {
+  color: #b799c4;
+  margin-left: 10%;
+  margin-top: 4%;
+  /* margin-bottom: 15%; */
+  /* width:; */
+  height: 50rem;
+  font-size: x-large;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https: //www.upmcmyhealthmatters.com/wp-content/uploads/2020/11/GettyImages-1181611274-1024x743.jpg");
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: 900;
+  text-size-adjust: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.line {
+  opacity: 1;
+}
+#line1{
+  font-size: 5rem;
+  line-height: 1;
+}
+#line2{
+  font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+#logo img {
+  height:40px;
+  
+  align-items: center;
+  border-radius: 40%;
+  margin-top: 2px;
+}
+
+/* #video-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+#video {
+  width: 100%;
+  height: 100%;
+  object-fit: calc(100%);
+} */
+
+.signin-btn:hover{
+  color: #1b9241;
+}
+.signup-btn:hover{
+  color: #1b9241;
+  background-color: #222;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #logo img{
+    animation: App-logo-spin infinite 10s linear;
+    animation-iteration-count: 1;
+    animation-duration: 4s;
+  }
+}
+
+
+.About {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+}
+
+.About .About-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.About .About-header>div {
+  color: #F3EDC8;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.About.reset .About-header div.show-reset {
+  color: #7D0A0A;
+}
+
+.About .About-elements {
+  margin-top: 15px;
+}
+
+.About .About-elements .About-element {
+  height: 50px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.About .About-elements input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #222;
+  background: #f5f5f5;
+}
+
+.About .About-elements button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: #7D0A0A;
+  color: #f5f5f5;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.About .About-elements button:hover {
+  background-color: #BF3131;
+}
+
+/* #logo {
+  text-align: center;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.3s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+} */
+#about{
+  background: rgba(214,
+    52,
+    132,
+    0.2);
+}
