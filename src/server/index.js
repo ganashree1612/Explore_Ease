@@ -7,7 +7,7 @@ const placeModel = require("./models/Places");
 const reviewModel = require("./models/Review");
 const path = require("path")
 const fs = require("fs/promises");
-
+const bcrypt = require("bcrypt");
 const multer = require("multer");
 const { CardBody } = require("react-bootstrap");
 const storage = multer.diskStorage({
@@ -95,7 +95,16 @@ app.get("/reviews/:placeName", async (req, res) => {
 
 app.post("/User", async (req, res) => {
   try {
-    const user = await UserModel.create(req.body);
+    const { name, email, password } = req.body
+    console.log(password)
+    const hash=await bcrypt.hash(password,12)
+    // const user = await UserModel.create(req.body);
+    const user = new UserModel({
+      name,
+      email,
+      password:hash
+    })
+    await user.save()
     res.json(user);
   } catch (err) {
     console.error("Error creating user:", err);
@@ -105,11 +114,9 @@ app.post("/User", async (req, res) => {
 app.post("/User/check", async (req, res) => {
   try {
     const { email, password } = req.body;
-
-  
-    const user = await UserModel.findOne({ email, password });
-
-    if (user) {
+    const user = await UserModel.findOne({ email });
+    const pass=await bcrypt.compare(password,user.password)
+    if (pass&&user) {
       
       res.json({ exists: true, email: user.email, password: user.password });
     } else {
